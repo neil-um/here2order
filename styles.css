@@ -1,10 +1,24 @@
 /* Add your styles here */
 
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  overflow-x: hidden; /* Hide horizontal overflow */
+  font-family: 'Roboto', sans-serif;
 }
+
+#menu {
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 1rem;
+  max-height: 80vh; /* Set maximum height to 80% of the viewport height */
+  overflow-y: scroll; /* Enable vertical scroll */
+  display: flex;
+  flex-direction: column; /* Stack menu items vertically */
+  align-items: center; /* Center menu items horizontally */
+  text-align: center; /* Reset text alignment for the menu items */
+}
+
+
 
 header {
   background-color: #333;
@@ -19,15 +33,6 @@ header img {
   width: 100px; /* Adjust the width of the logo as needed */
   height: auto; /* Maintain aspect ratio */
   margin-right: 1rem; /* Add some spacing between the logo and the text */
-}
-
-#menu {
-  display: flex;
-  justify-content: center; /* Horizontally center the items */
-  align-items: center; /* Vertically center the items */
-  padding: 1rem;
-  flex-direction: column; /* Display items vertically */
-  height: 100vh; /* Set height to 100% of the viewport height */
 }
 
 #menu img {
