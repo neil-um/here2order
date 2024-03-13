@@ -3,11 +3,11 @@ const app = express();
 const path = require('path');
 
 // Serve static files from the 'public' directory
-app.use(express.static('public'));
+app.use(express.static());
 
 // Route for the main page
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 // Start server
