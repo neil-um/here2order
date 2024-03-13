@@ -1,8 +1,8 @@
 // Sample food items data
 const menuItems = [
-  { id: 1, name: 'Soy Burger', price: 158, image: "veggie_burger.webp" },
-  { id: 2, name: 'Beef Burger', price: 2350, image: "beef_burger.jpeg" },
-  { id: 3, name: 'Chicken Burger', price: 710, image: "chicken_burger.jpeg" },
+  { id: 1, name: 'Soy Burger', price: 158, image: 'veggie_burger.webp' },
+  { id: 2, name: 'Beef Burger', price: 2350, image: 'beef_burger.jpeg' },
+  { id: 3, name: 'Chicken Burger', price: 710, image: 'chicken_burger.jpeg' },
   // Add more items as needed
 ];
 
@@ -16,7 +16,7 @@ function displayMenu() {
 
   // Add image at the top of the menu
   const menuImage = document.createElement('img');
-  menuImage.src = 'menu_image.jpg'; // Replace with the path to your menu image
+  menuImage.src = 'logo.jpeg'; // Replace with the path to your menu image
   menuImage.alt = 'Menu Image';
   menuElement.appendChild(menuImage);
 
@@ -30,6 +30,7 @@ function displayMenu() {
     const menuItem = document.createElement('div');
     menuItem.classList.add('menu-item');
     menuItem.innerHTML = `
+          <img src="${item.image}" alt="${item.name}">
           <h3>${item.name}</h3>
           <p>${item.price}L</p>
           <button onclick="addToCart(${item.id})">Add to Cart</button>
