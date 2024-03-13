@@ -4,7 +4,6 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden; /* Hide horizontal overflow */
-  font-family: 'Roboto', sans-serif;
 }
 
 #menu {
@@ -15,10 +14,8 @@ body {
   display: flex;
   flex-direction: column; /* Stack menu items vertically */
   align-items: center; /* Center menu items horizontally */
-  text-align: center; /* Reset text alignment for the menu items */
+  text-align: left; /* Reset text alignment for the menu items */
 }
-
-
 
 header {
   background-color: #333;
