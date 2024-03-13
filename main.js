@@ -1,8 +1,8 @@
 // Sample food items data
 const menuItems = [
-  { id: 1, name: 'Soy Burger', price: 158, image: 'veggie_burger.webp'},
-  { id: 2, name: 'Beef Burger', price: 2350, image: 'beef_burger.jpeg' },
-  { id: 3, name: 'Chicken Burger', price: 710, image: 'chicken_burger.jpeg' },
+  { id: 1, name: 'Soy Burger', price: 158, image: "veggie_burger.webp" },
+  { id: 2, name: 'Beef Burger', price: 2350, image: "beef_burger.jpeg" },
+  { id: 3, name: 'Chicken Burger', price: 710, image: "chicken_burger.jpeg" },
   // Add more items as needed
 ];
 
@@ -11,33 +11,32 @@ let cart = [];
 
 // Function to display menu
 function displayMenu() {
-  const menuElement = document.getElementById("menu");
-  menuElement.innerHTML = ""; // Clear previous content
+  const menuElement = document.getElementById('menu');
+  menuElement.innerHTML = ''; // Clear previous content
 
   // Add image at the top of the menu
-  const menuImage = document.createElement("img");
-  menuImage.src = "menu_image.jpg"; // Replace with the path to your menu image
-  menuImage.alt = "Menu Image";
+  const menuImage = document.createElement('img');
+  menuImage.src = 'menu_image.jpg'; // Replace with the path to your menu image
+  menuImage.alt = 'Menu Image';
   menuElement.appendChild(menuImage);
 
   // Add some spacing between the image and the menu items
-  const spacingElement = document.createElement("div");
-  spacingElement.style.marginBottom = "1rem"; // Adjust spacing as needed
+  const spacingElement = document.createElement('div');
+  spacingElement.style.marginBottom = '1rem'; // Adjust spacing as needed
   menuElement.appendChild(spacingElement);
 
   // Add menu items
-  menuItems.forEach(item => {
-      const menuItem = document.createElement("div");
-      menuItem.classList.add("menu-item");
-      menuItem.innerHTML = `
+  menuItems.forEach((item) => {
+    const menuItem = document.createElement('div');
+    menuItem.classList.add('menu-item');
+    menuItem.innerHTML = `
           <h3>${item.name}</h3>
           <p>${item.price}L</p>
           <button onclick="addToCart(${item.id})">Add to Cart</button>
       `;
-      menuElement.appendChild(menuItem);
+    menuElement.appendChild(menuItem);
   });
 }
-
 
 // Function to add item to cart
 function addToCart(itemId) {
